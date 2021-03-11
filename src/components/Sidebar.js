@@ -16,7 +16,38 @@ const Sidebar = () => {
 				isSidebarOpen
 					? "sidebar-wrapper show"
 					: "sidebar-wrapper"
-			}`}></aside>
+			}`}>
+			<div className="sidebar">
+				<button
+					className="close-btn"
+					onClick={closeSidebar}>
+					<FaTimes></FaTimes>
+				</button>
+
+				<div className="sidebar-links">
+					{sublinks.map((sublink, index) => {
+						const { links, page } = sublink;
+						return (
+							<article key={index}>
+								<h4>{page}</h4>
+								<div className="sidebar-sublinks">
+									{links.map((link, index) => {
+										const { url, icon, label } = link;
+										return (
+											<a href={url} key={index}>
+												{" "}
+												{icon}
+												{label}
+											</a>
+										);
+									})}
+								</div>
+							</article>
+						);
+					})}
+				</div>
+			</div>
+		</aside>
 	);
 };
 

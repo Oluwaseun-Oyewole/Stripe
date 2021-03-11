@@ -324,6 +324,7 @@ Stripe Styles
 	transition: var(--transition);
 	transform: scale(0);
 	background: rgba(0, 0, 0, 0.5);
+	font-family: "monospace";
 }
 .sidebar-wrapper.show {
 	visibility: visible;

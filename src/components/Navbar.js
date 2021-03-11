@@ -12,6 +12,10 @@ const Navbar = () => {
 		openSubmenu,
 	} = useGlobalContext();
 
+	const displaySubmenu = (e) => {
+		console.log("hello");
+		openSubmenu();
+	};
 	return (
 		<nav className="nav">
 			<div className="nav-center">
@@ -28,15 +32,27 @@ const Navbar = () => {
 				</div>
 				<ul className="nav-links">
 					<li>
-						<button className="link-btn">products</button>
+						<button
+							className="link-btn"
+							onMouseOver={displaySubmenu}>
+							products
+						</button>
 					</li>
 					<li>
 						{" "}
-						<button className="link-btn">developers</button>
+						<button
+							className="link-btn"
+							onMouseOver={displaySubmenu}>
+							developers
+						</button>
 					</li>
 					<li>
 						{" "}
-						<button className="link-btn">company</button>
+						<button
+							className="link-btn"
+							onMouseOver={displaySubmenu}>
+							company
+						</button>
 					</li>
 				</ul>
 				<button className="btn  signin-btn">sign in</button>
