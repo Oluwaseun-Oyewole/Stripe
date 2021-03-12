@@ -8,15 +8,10 @@ const Hero = () => {
 	const { closeSubmenu } = useGlobalContext();
 
 	return (
-		<section className="hero">
+		<section className="hero" onMouseOver={closeSubmenu}>
 			<div className="hero-center">
 				<article className="hero-info">
-					<h1
-						style={{
-							fontSize: "50px",
-						}}>
-						Payment infrastructure for the internet
-					</h1>
+					<h1>Payment infrastructure for the internet</h1>
 					<p>
 						Milllions of companies of all sizes-from
 						startups to Fortune 500s-use Stripe's software

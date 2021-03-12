@@ -213,6 +213,10 @@ Stripe Styles
 	max-width: 500px;
 	margin-bottom: 2rem;
 }
+.hero-info:hover {
+	color: var(--clr-grey-5);
+	transition: var(--transition);
+}
 .hero-info p {
 	max-width: 35em;
 	line-height: 1.8;
